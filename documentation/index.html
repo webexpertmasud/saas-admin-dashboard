@@ -1,0 +1,64 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ReachBoard Documentation</title>
+<style>
+body{font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif;color:#14213d;background:#f6f6f2;margin:0}
+.wrap{max-width:760px;margin:0 auto;padding:2rem 1.25rem 4rem}
+h1{font-size:2rem;margin:0 0 .25rem}h2{margin-top:2.5rem;padding-top:1rem;border-top:1px solid #e4e4dc;font-size:1.35rem}
+code,pre{background:#ecece4;border-radius:4px;font-family:ui-monospace,Consolas,monospace;font-size:.9em}
+code{padding:.1em .35em}pre{padding:1rem;overflow-x:auto}
+nav a{margin-right:1rem;color:#14213d}.muted{color:#6b7280}
+table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #e4e4dc;padding:.5rem;text-align:left}
+</style></head><body><div class="wrap">
+<h1>ReachBoard</h1><p class="muted">SaaS Admin Dashboard Template &middot; Bootstrap 5.3 &middot; Version 1.0.0</p>
+<nav><a href="#intro">Introduction</a><a href="#start">Getting started</a><a href="#files">File structure</a><a href="#custom">Customization</a><a href="#pages">Add a page</a><a href="#credits">Credits</a><a href="#support">Support</a></nav>
+
+<h2 id="intro">Introduction</h2>
+<p>Thank you for purchasing ReachBoard. It is a responsive admin dashboard template built with plain HTML, CSS and JavaScript on top of Bootstrap 5. There is no build step and no framework to learn: open a file in your browser or edit it in any code editor.</p>
+<p><strong>What is included</strong></p>
+<ul><li>17 ready-to-use pages: dashboard, analytics, orders, users, products, customers, invoices, billing, profile, settings, notifications, empty state, coming soon, 404, login, register and forgot password</li><li>Dashboard with revenue, traffic and sales charts, recent orders, recent users and an activity timeline</li><li>Light and dark mode, remembered in the visitor's browser</li><li>Responsive layout with a collapsible sidebar on mobile</li><li>Charts powered by Chart.js</li></ul>
+<p>All names, emails and numbers in the demo are placeholders.</p>
+
+<h2 id="start">Getting started</h2>
+<ol><li>Unzip the download.</li><li>Open <code>index.html</code> in your browser. It forwards to the login page.</li><li>Click <em>Sign in</em> to open the dashboard. The login form is a visual demo only and does not check credentials.</li></ol>
+<p>To use the template on a server, upload the whole folder. Keep the <code>html</code> and <code>assets</code> folders side by side, because pages load files with relative paths such as <code>../assets/css/style.css</code>.</p>
+
+<h2 id="files">File structure</h2>
+<pre>saas-admin-dashboard/
+├── documentation/index.html   this file
+├── html/                      all pages (see list below)
+├── assets/
+│   ├── css/style.css          theme and layout styles
+│   ├── js/main.js             theme toggle, sidebar, charts
+│   └── vendor/                Bootstrap and Chart.js
+├── index.html
+└── README.txt</pre>
+<p><strong>Pages in <code>html/</code></strong></p>
+<ul><li>Authentication: login, register, forgot-password</li><li>Main: dashboard, analytics, orders, users</li><li>Management: products, customers, invoices</li><li>Account: billing, profile, settings</li><li>Extra: notifications, empty-state, coming-soon, 404</li></ul>
+
+<h2 id="custom">Customization</h2>
+<p><strong>Colors.</strong> Open <code>assets/css/style.css</code>. The variables at the top control the whole theme.</p>
+<table><tr><th>Variable</th><th>Controls</th></tr>
+<tr><td><code>--ink</code></td><td>Sidebar background</td></tr>
+<tr><td><code>--accent</code></td><td>Buttons and chart highlights</td></tr>
+<tr><td><code>--bg</code></td><td>Page background</td></tr>
+<tr><td><code>--card</code></td><td>Card background</td></tr>
+<tr><td><code>--line</code></td><td>Borders and dividers</td></tr>
+<tr><td><code>--text</code></td><td>Main text color</td></tr></table>
+<p>Dark mode colors are set in the <code>[data-bs-theme=dark]</code> block just below. The charts read their colors from <code>assets/js/main.js</code>, so change <code>#e8912d</code> there to match a new accent.</p>
+<p><strong>Logo and name.</strong> Search for <code>Reach&lt;i&gt;Board&lt;/i&gt;</code> in the files inside <code>html/</code> and replace it with your own brand name or an <code>&lt;img&gt;</code> tag.</p>
+<p><strong>Chart data.</strong> Each chart is created in <code>assets/js/main.js</code>. Edit the <code>labels</code> and <code>data</code> arrays to show your own numbers. See the Chart.js documentation for more chart types.</p>
+<p><strong>Default theme.</strong> The template starts in light mode. To start in dark mode, change <code>saved||'light'</code> to <code>saved||'dark'</code> in <code>assets/js/main.js</code>.</p>
+
+<h2 id="pages">Add a new page</h2>
+<ol><li>Copy <code>html/settings.html</code> and rename it, for example <code>reports.html</code>.</li><li>Change the <code>&lt;title&gt;</code>, the <code>&lt;h1&gt;</code> and the content inside <code>&lt;main class="main"&gt;</code>.</li><li>In every page, add a link to the sidebar: <code>&lt;a class="nav-link" href="reports.html"&gt;Reports&lt;/a&gt;</code></li><li>On the new page, add the class <code>active</code> to its own sidebar link.</li></ol>
+
+<h2 id="credits">Credits and licenses</h2>
+<ul><li><a href="https://getbootstrap.com">Bootstrap 5.3.3</a> &ndash; MIT License</li><li><a href="https://www.chartjs.org">Chart.js 4.4.4</a> &ndash; MIT License</li></ul>
+<p>Both libraries are included in <code>assets/vendor</code>. The demo uses your system's default fonts, and no images are included.</p>
+<p><strong>Browser support:</strong> latest versions of Chrome, Edge, Firefox and Safari.</p>
+
+<h2 id="changelog">Changelog</h2>
+<p><strong>1.0.0</strong> &ndash; Initial release.</p>
+
+<h2 id="support">Support</h2>
+<p>For questions or bug reports, contact <strong>support@your-domain.com</strong>. Please include your browser, the page name and a short description of the problem.</p>
+</div></body></html>

@@ -1,0 +1,28 @@
+:root{--ink:#14213d;--accent:#e8912d;--bg:#f6f6f2;--card:#fff;--line:#e4e4dc;--muted:#6b7280;--text:#14213d}
+[data-bs-theme=dark]{--bg:#0f1524;--card:#18203a;--line:#2a3354;--muted:#9aa3bd;--text:#eef0f7}
+body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.sidebar{width:240px;background:var(--ink);color:#cfd5e6;position:fixed;inset:0 auto 0 0;padding:1.25rem 1rem;z-index:100;transition:transform .2s}
+.sidebar .brand{color:#fff;font-weight:700;font-size:1.15rem;margin-bottom:1.5rem;display:block;text-decoration:none}
+.sidebar .brand i{color:var(--accent);font-style:normal}
+.sidebar a.nav-link{color:#cfd5e6;border-radius:6px;padding:.5rem .75rem}
+.sidebar a.nav-link.active,.sidebar a.nav-link:hover{background:rgba(255,255,255,.1);color:#fff}
+.main{margin-left:240px;padding:1.5rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;color:var(--text)}
+.stat .value{font-size:1.75rem;font-weight:700}
+.stat .delta.up{color:#16a34a}.stat .delta.down{color:#dc2626}
+.table{--bs-table-bg:transparent;--bs-table-color:var(--text);--bs-table-border-color:var(--line)}
+.btn-accent{background:var(--accent);border-color:var(--accent);color:#1b1305;font-weight:600}
+.btn-accent:hover{background:#d37f1f;color:#1b1305}
+.form-control{background:var(--card);color:var(--text);border-color:var(--line)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media(max-width:991px){.sidebar{transform:translateX(-100%)}.sidebar.open{transform:none}.main{margin-left:0}}
+.sidebar{overflow-y:auto}
+.nav-group{font-size:.8rem;color:#8c96b3;margin:1.1rem .75rem .3rem}
+.avatar{width:36px;height:36px;border-radius:50%;background:var(--accent);color:#1b1305;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-size:.8rem;flex:none}
+.avatar.lg{width:72px;height:72px;font-size:1.4rem}
+.timeline{border-left:2px solid var(--line);margin-left:.4rem;padding-left:1rem}
+.timeline li{position:relative;padding-bottom:1rem}
+.timeline li::before{content:"";position:absolute;left:-1.35rem;top:.4rem;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.unread{border-left:3px solid var(--accent)}
+.center-page{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:1.5rem}
+.big-code{font-size:5rem;font-weight:800;line-height:1;color:var(--accent)}
